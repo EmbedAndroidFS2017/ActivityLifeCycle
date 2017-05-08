@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Activity Life Cycle</string>
+    <string name="onCreate">onCreate() Aufrufe: 0</string>
+    <string name="onStart">onStart() Aufrufe: 0</string>
+    <string name="onResume">onResume() Aufrufe: 0</string>
+    <string name="onRestart">onRestart() Aufrufe: 0</string>
+    <string name="button">ActivityTwo starten</string>
+    <string name="title_activity_activity_two">ActivityTwo</string>
+    <string name="close">Activity schliessen</string>
+
+</resources>
