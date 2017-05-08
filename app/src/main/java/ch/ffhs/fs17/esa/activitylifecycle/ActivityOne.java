@@ -21,15 +21,6 @@ public class ActivityOne extends Activity {
     private final static String TAG = "Lab-ActivityOne";
 
     // Lifecycle counters
-
-    private int mCreate = 0;
-    private int mRestart = 0;
-    private int mStart = 0;
-    private int mResume = 0;
-    private TextView mTvCreate;
-    private TextView mTvRestart;
-    private TextView mTvStart;
-    private TextView mTvResume;
     // TODO:
     // Create variables named
     // mCreate, mRestart, mStart and mResume
@@ -50,10 +41,6 @@ public class ActivityOne extends Activity {
 
         // TODO: Assign the appropriate TextViews to the TextView variables
         // Hint: Access the TextView by calling Activity's findViewById()
-        mTvCreate = (TextView) findViewById(R.id.create);
-        mTvRestart = (TextView) findViewById(R.id.restart);
-        mTvStart = (TextView) findViewById(R.id.start);
-        mTvResume = (TextView) findViewById(R.id.resume);
 
         Button launchActivityTwoButton = (Button) findViewById(R.id.bLaunchActivityTwo);
         launchActivityTwoButton.setOnClickListener(new View.OnClickListener() {
@@ -79,10 +66,6 @@ public class ActivityOne extends Activity {
             // TODO:
             // Restore value of counters from saved state
             // Only need 4 lines of code, one for every count variable
-            mCreate = savedInstanceState.getInt(CREATE_KEY);
-            mRestart = savedInstanceState.getInt(RESTART_KEY);
-            mStart = savedInstanceState.getInt(START_KEY);
-            mResume = savedInstanceState.getInt(RESUME_KEY);
         }
 
         // Emit LogCat message
@@ -91,7 +74,6 @@ public class ActivityOne extends Activity {
         // TODO:
         // Update the appropriate count variable
         // Update the user interface via the displayCounts() method
-        mCreate++;
         displayCounts();
     }
 
@@ -107,7 +89,6 @@ public class ActivityOne extends Activity {
         // TODO:
         // Update the appropriate count variable
         // Update the user interface
-        mStart++;
         displayCounts();
     }
 
@@ -121,7 +102,6 @@ public class ActivityOne extends Activity {
         // TODO:
         // Update the appropriate count variable
         // Update the user interface
-        mResume++;
         displayCounts();
     }
 
@@ -151,7 +131,6 @@ public class ActivityOne extends Activity {
         // TODO:
         // Update the appropriate count variable
         // Update the user interface
-        mRestart++;
         displayCounts();
     }
 
@@ -168,10 +147,6 @@ public class ActivityOne extends Activity {
         // TODO:
         // Save state information with a collection of key-value pairs
         // 4 lines of code, one for every count variable
-        savedInstanceState.putInt(CREATE_KEY, mCreate);
-        savedInstanceState.putInt(RESTART_KEY, mRestart);
-        savedInstanceState.putInt(START_KEY, mStart);
-        savedInstanceState.putInt(RESUME_KEY, mResume);
     }
 
     // Updates the displayed counters
@@ -180,12 +155,6 @@ public class ActivityOne extends Activity {
     // specified above
     public void displayCounts() {
 
-        // TODO - uncomment these lines
-
-        mTvCreate.setText("onCreate() calls: " + mCreate);
-        mTvStart.setText("onStart() calls: " + mStart);
-        mTvResume.setText("onResume() calls: " + mResume);
-        mTvRestart.setText("onRestart() calls: " + mRestart);
-
+        // TODO - set text on the corresponding text views with the counters.
     }
 }
